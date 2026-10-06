@@ -41,7 +41,7 @@ $env:MLFLOW_ALLOW_FILE_STORE = "true"
 uv run mlflow ui --backend-store-uri .\mlruns --host 127.0.0.1 --port 5000
 ```
 
-Open `http://127.0.0.1:5000`. Capture and include screenshots showing the experiment run table with all three candidates and the registered model version in Production. Keep those screenshots in `reports/` alongside the generated CSV artifacts.
+Open `http://127.0.0.1:5000` to inspect the experiment run table and model registry. The committed comparison CSV contains metrics for all three candidates, and the registry transition CSV records promotion to Production. UI screenshots can be added to `reports/` as supplemental evidence if desired or requested by the instructor.
 
 ## Serve the champion
 
@@ -62,4 +62,4 @@ uv run pytest -q
 
 ## Submission contents
 
-Include `.gitignore`, this README, `pyproject.toml`, `uv.lock`, `src/mlops_project/`, `tests/`, the dataset CSV if used, generated comparison and registry evidence CSVs, the Evidently HTML report, and the MLflow screenshots. Do not include `.venv/`, `mlruns/`, `run_output.log`, `__pycache__/`, `.pytest_cache/`, or `src/*.egg-info/`.
+Include `.gitignore`, this README, `pyproject.toml`, `uv.lock`, `src/mlops_project/`, `tests/`, the dataset CSV if used, generated comparison and registry evidence CSVs, and the Evidently HTML report. MLflow UI screenshots are supplemental and can be added under `reports/` if requested. Do not include `.venv/`, `mlruns/`, `run_output.log`, `__pycache__/`, `.pytest_cache/`, or `src/*.egg-info/`.
