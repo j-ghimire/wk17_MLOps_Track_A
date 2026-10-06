@@ -1,0 +1,3 @@
+model_name,version,from_stage,to_stage,run_id
+telco-churn-model,23,Unassigned,Staging,f829b0e880a44712b4032b2175fb7fc2
+telco-churn-model,23,Staging,Production,f829b0e880a44712b4032b2175fb7fc2

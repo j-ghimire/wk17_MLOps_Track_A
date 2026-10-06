@@ -1,0 +1,26 @@
+[project]
+name = "wk17-mlops"
+version = "0.1.0"
+description = "Track A MLOps project for telco churn prediction"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "mlflow>=2.14.0",
+  "numpy>=1.26.0",
+  "pandas>=2.2.0",
+  "scikit-learn>=1.5.0",
+  "joblib>=1.4.0",
+  "evidently>=0.4.32"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0"
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
